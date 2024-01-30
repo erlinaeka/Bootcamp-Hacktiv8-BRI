@@ -1,0 +1,90 @@
+body{
+    margin: 0;
+}
+
+.checkOutPage{
+    height: 650px;
+    display: flex;
+}
+
+.colCheckOutPage{
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+/* ini kalau pgn gambar sebagai background dan memenuhi div */
+/* .bgOne{
+    background-image: url(../images/brimo.webp);
+    background-size: cover;
+} */
+
+#gambarProduct{
+    margin: auto;
+    width: 500px;
+}
+
+.formDiv{
+    height: 300px;
+    margin: auto;
+    background: orangered;
+    padding: 50px 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 3px;
+}
+
+.formTitle{
+    color:white;
+    text-align: center;
+    align-items: center;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.btn-order{
+    display: block;
+}
+
+
+
+.inputForm{
+    display: block;
+    height: 35px;
+    width: 97%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    padding: 7px 3px;
+    background: transparent;
+    
+}
+
+.inputED, .inputCVV{
+    height: 35px;
+    width: 48%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    padding: 7px 3px;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+.btn-order{
+    padding: 8px 29px;
+    border-radius: 4px;
+    margin-top: 15px;
+    font-size: 12px;
+    border: none;
+    border-radius: 0;
+    background-color: white;
+    /* border-style: none; */
+}
+
+input::placeholder{
+    color:white;
+    padding: 8px;
+}
+
