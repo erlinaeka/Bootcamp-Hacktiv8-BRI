@@ -49,49 +49,41 @@
           <img src="./image/user-dev.jpeg" alt="" class="mx-auto d-block">
         </div>
         <div class="col-md-3 col-sm-12">
-          <h2>Erlina Eka Fitriani</h2>
-          <p>Front End Designer</p>
-          <button type="button" class="btn btn-primary">Kontak</button>
+          <h2 id="displayNama">Erlina Eka Fitriani</h2>
+          <p id="displayRole">Front End Designer</p>
+          <button type="button" class="btn btn-primary" onclick="showFormInput()">Edit</button>
           <button type="button" class="btn btn-outline-success">Resume</button>
         </div>
         <div class="col-md-7 col-sm-12 border-start">
           <div class="row gx-sm-4">
-            <div class="col-3 c">
+            <div class="col-3">
               <strong>Availability</strong>
             </div>
-            <div class="col">
-              Full Time
-            </div>
+            <div class="col" id="displayAvailability">Full Time</div>
           </div>
           <div class="row gx-sm-4">
               <div class="col-3">
                 <strong>Usia</strong>
               </div>
-              <div class="col">
-                23
-              </div>
+              <div class="col" id="displayUsia">23</div>
           </div>
           <div class="row gx-sm-4">
               <div class="col-3">
                 <strong>Lokasi</strong>
               </div>
-              <div class="col">
-                Jakarta, Indonesia
-              </div>
+              <div class="col" id="displayLokasi">Jakarta, Indonesia</div>
           </div>           
           <div class="row gx-sm-4">
               <div class="col-3">
                 <strong>Pengalaman</strong>
               </div>
-              <div class="col">
-                1
-              </div>
+              <div class="col" id="displayPengalaman">1</div>
           </div>           
           <div class="row gx-sm-4">
               <div class="col-3">
                 <strong>Email</strong>
               </div>
-              <div class="col">
+              <div class="col" id="displayEmail">
                 Developer@gmail.com
               </div>
           </div>
@@ -102,7 +94,7 @@
 
     <!-- Card Form -->
     <div class="form container bg-white mt-5 mb-5">
-        <form>
+        <form id="formInput" class="visually-hidden">
             <div class="mb-3">
               <label for="nama" class="form-label">Nama</label>
               <input type="text" class="form-control" id="nama" aria-describedby="emailHelp">
@@ -131,7 +123,9 @@
                 <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" id="email">
             </div>     
-            <button type="submit" class="btn btn-success col-12">SUBMIT</button>
+            <!-- <button type="submit" class="btn btn-success col-12" onclick="submitFormInput()">SUBMIT</button> -->
+            <input type="button" onclick=submitFormInput() class="btn btn-success col-12" value="Submit">
+            <!-- supaya bisa disubmit -->
           </form>
     </div>
     <!-- Card Form End -->
@@ -143,6 +137,46 @@
       // Langkah langkah : 
       // 1. Form untuk input data di lakukan hidden terlebih dahulu
       // 2. Kalo button edit diklik, maka form akan tampil disertai dengan data yang diri yang sudah ter-update
+
+      function showFormInput(){
+          // nama
+          document.getElementById("nama").value = document.getElementById("displayNama").innerHTML;
+          // role
+          document.getElementById("role").value = document.getElementById("displayRole").innerHTML;
+          // availability
+          document.getElementById("availability").value = document.getElementById("displayAvailability").innerHTML;
+          // usia
+          document.getElementById("age").value = document.getElementById("displayUsia").innerHTML;
+          // lokasi
+          document.getElementById("lokasi").value = document.getElementById("displayLokasi").innerHTML;
+          // pengalaman
+          document.getElementById("years").value = document.getElementById("displayPengalaman").innerHTML;
+          // email
+          document.getElementById("email").value = document.getElementById("displayEmail").innerHTML;
+          // show form setelah get data 
+          document.getElementById("formInput").classList.remove("visually-hidden");
+      }
+
+      function submitFormInput(){
+          // nama
+          document.getElementById("displayNama").innerHTML = document.getElementById("nama").value;
+          // role
+          document.getElementById("displayRole").innerHTML = document.getElementById("role").value;
+          // availability
+          document.getElementById("displayAvailability").innerHTML = document.getElementById("availability").value;
+          // usia
+          document.getElementById("displayUsia").innerHTML = document.getElementById("age").value;
+          // lokasi
+          document.getElementById("displayLokasi").innerHTML = document.getElementById("lokasi").value ;
+          // pengalaman
+          document.getElementById("displayPengalaman").innerHTML = document.getElementById("years").value;
+          // email
+          document.getElementById("displayEmail").innerHTML = document.getElementById("email").value;
+
+          // hidden form setelah update
+          document.getElementById("formInput").classList.add("visually-hidden");
+      }
+
 
     </script>
   </body>
