@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Check grade based your score</h3>
+    <button onclick="checkGrade()">Check Grade</button>
+
+
+    <script>
+        function checkGrade(){
+            let inputScore = prompt("Please enter your score", "enter only your score number");
+            inputScore = parseInt(inputScore);
+            if(inputScore >= 80 && inputScore <= 100 ){
+                return alert("your grade is A");
+            }else if(inputScore >= 60 && inputScore < 80){
+                return alert("your grade is B");
+            }else if(inputScore >= 40 && inputScore < 60){
+                return alert("your grade is C");
+            }else if(inputScore < 40){
+                return alert("your grade is D")
+            }else{
+                return alert("cannot calculate your grade");
+            }
+
+            // ini mau kalau mau pengkondisian one line
+            // return inputScore <1 || inputScore > 100 ? 
+            //     alert("cannot calculate your grade") :
+            //     inputScore >= 80 && inputScore < 100 ? alert("your grade is A") : 
+            //     inputScore >= 60 && inputScore < 80 ? alert("your grade is B") : 
+            //     inputScore >= 40 && inputScore < 60 ? alert("your grade is C") : 
+            //     inputScore < 40 && alert("your grade is D"); 
+        }
+    </script>
+
+</body>
+</html>

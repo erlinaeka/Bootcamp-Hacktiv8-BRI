@@ -1,0 +1,16 @@
+{
+  "name": "perulangan-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "perulangan_javascript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon run perulangan_javascript.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
