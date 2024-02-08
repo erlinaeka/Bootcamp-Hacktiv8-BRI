@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/goals-akhir.css">
+    <title>Assignment Pertama HTML CSS</title>
+  </head>
+  <body class="bg-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container-fluid container">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Product</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">My Inventory</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Card Identitas -->
+    <div class="container bg-white mt-5 mb-5 px-3 py-4">
+      <div class="row gy-4">
+        <div class="col-md-2 col-sm-12">
+          <img src="{{ asset('images/user-dev.jpeg') }}" alt="" class="mx-auto d-block">
+        </div>
+        <div class="col-md-3 col-sm-12">
+          <h2 class="text-center text-md-start">Erlina Eka Fitriani</h2>
+          <p class="text-center text-md-start">Front End Designer</p>
+          <div class="text-center text-md-start">
+            <button type="button" class="btn btn-primary">Kontak</button>
+            <button type="button" class="btn btn-outline-success">Resume</button>
+          </div>
+        </div>
+        <div class="col-md-7 col-sm-12 border-start">
+          <div class="row gx-sm-4">
+            <div class="col-3 c">
+              <strong>Availability</strong>
+            </div>
+            <div class="col">
+              Full Time
+            </div>
+          </div>
+          <div class="row gx-sm-4">
+              <div class="col-3">
+                <strong>Usia</strong>
+              </div>
+              <div class="col">
+                23
+              </div>
+          </div>
+          <div class="row gx-sm-4">
+              <div class="col-3">
+                <strong>Lokasi</strong>
+              </div>
+              <div class="col">
+                Jakarta, Indonesia
+              </div>
+          </div>           
+          <div class="row gx-sm-4">
+              <div class="col-3">
+                <strong>Pengalaman</strong>
+              </div>
+              <div class="col">
+                1
+              </div>
+          </div>           
+          <div class="row gx-sm-4">
+              <div class="col-3">
+                <strong>Email</strong>
+              </div>
+              <div class="col">
+                Developer@gmail.com
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Card Identitas -->
+
+    <!-- Card Form -->
+    <div class="form container bg-white mt-5 mb-5">
+        <form>
+            <div class="mb-3">
+              <label for="nama" class="form-label">Nama</label>
+              <input type="text" class="form-control" id="nama" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="role" class="form-label">Role</label>
+              <input type="text" class="form-control" id="role">
+            </div>
+            <div class="mb-3">
+                <label for="availability" class="form-label">Availability</label>
+                <input type="text" class="form-control" id="availability">
+            </div>
+            <div class="mb-3">
+                <label for="age" class="form-label">Age</label>
+                <input type="number" class="form-control" id="age">
+            </div>
+            <div class="mb-3">
+                <label for="lokasi" class="form-label">Lokasi</label>
+                <input type="text" class="form-control" id="lokasi">
+            </div>        
+            <div class="mb-3">
+                <label for="years" class="form-label">Years Experience</label>
+                <input type="number" class="form-control" id="years">
+            </div> 
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email">
+            </div>     
+            <button type="submit" class="btn btn-success col-12">SUBMIT</button>
+          </form>
+    </div>
+    <!-- Card Form End -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+
+      // Langkah langkah : 
+      // 1. Form untuk input data di lakukan hidden terlebih dahulu
+      // 2. Kalo button edit diklik, maka form akan tampil disertai dengan data yang diri yang sudah ter-update
+
+    </script>
+  </body>
+</html>
