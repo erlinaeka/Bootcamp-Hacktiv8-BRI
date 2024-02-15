@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Feb 15, 2024 at 03:55 PM
+-- Generation Time: Feb 15, 2024 at 04:06 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -40,7 +40,8 @@ CREATE TABLE `category` (
 
 INSERT INTO `category` (`category_id`, `category_name`, `created_at`, `updated_at`) VALUES
 (1, 'Fashion', '2024-02-13 01:40:09', '2024-02-13 01:40:09'),
-(2, 'Make Up', '2024-02-13 01:40:19', '2024-02-13 01:40:30');
+(2, 'Make Up', '2024-02-13 01:40:19', '2024-02-13 01:40:30'),
+(6, 'Smartphone', '2024-02-15 09:01:27', '2024-02-15 09:01:27');
 
 -- --------------------------------------------------------
 
@@ -107,9 +108,7 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`order_id`, `order_invoice_id`, `order_user`, `order_status`, `order_date`, `order_total`, `created_at`, `updated_at`) VALUES
-(1, 'INV-20240215-of1m8dSJ', 1, 'pending', '2024-02-15', 30000, '2024-02-15 08:06:02', '2024-02-15 08:06:02'),
-(2, 'INV-20240215-X3MvOtmd', 1, 'pending', '2024-02-15', 30000, '2024-02-15 08:20:43', '2024-02-15 08:20:43'),
-(3, 'INV-20240215-nm7PXS8U', 1, 'done', '2024-02-15', 0, '2024-02-15 08:26:32', '2024-02-15 08:52:39');
+(4, 'INV-20240215-05jQhJgT', 1, 'delivered', '2024-02-15', 301000, '2024-02-15 09:05:31', '2024-02-15 09:05:41');
 
 -- --------------------------------------------------------
 
@@ -183,7 +182,9 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`product_id`, `product_name`, `product_slug`, `category_id`, `product_desc`, `product_status`, `product_price`, `product_weight`, `product_img_url`, `created_at`, `updated_at`) VALUES
-(5, 'Lenovo Baru', 'lenovo-baru', 2, '<p>lorem baru</p>', 'publish', 5000, 2, 'aWf9gT0sSYPuFAmvkwUDe2GkJ6UykSH34f5hadTu.jpg', '2024-02-14 05:54:50', '2024-02-14 06:56:20');
+(5, 'Samsung A23', 'samsung-a23', 6, '<p>lorem ipsum</p>', 'publish', 23000000, 2, 'WTPxY8TSG8qbErf6BvYCatok8IRq6gQX65MoER14.jpg', '2024-02-14 05:54:50', '2024-02-15 09:03:15'),
+(7, 'Cushion Somethinc', 'cushion-somethinc', 2, '<p>lorem ipsum</p>', 'publish', 134000, 1, 'F75V7CEZ8iWs5j8MNKaSgbN0Fbafo2SXFffScAD4.png', '2024-02-15 09:04:20', '2024-02-15 09:04:20'),
+(8, 'Blouse Korea Cherry', 'blouse-korea-cherry', 1, '<p>lorem ipsum</p>', 'publish', 167000, 1, 'Pq4bM18DrvkbMLfExKaNqU6jnnHVQ1GsSuvZtQ62.png', '2024-02-15 09:05:09', '2024-02-15 09:05:09');
 
 -- --------------------------------------------------------
 
@@ -286,7 +287,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `category_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `category_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -304,13 +305,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `order_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `order_items`
 --
 ALTER TABLE `order_items`
-  MODIFY `order_item_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `order_item_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -322,7 +323,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `product_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
